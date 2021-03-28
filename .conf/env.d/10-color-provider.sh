@@ -14,7 +14,7 @@ case $THEME in
     MAGENTA='c792ea'
     CYAN='89ddff'
 
-    PRIMARY=$CYAN
+    PRIMARY=$GREEN
     SECONDARY=$MAGENTA
     ;;
   *)
