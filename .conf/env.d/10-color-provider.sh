@@ -2,7 +2,7 @@
 
 
 BLACK='212121'
-LIGHT_GRAY='eeffff'
+LIGHT_GRAY='dddddd'
 DARK_GRAY='4a4a4a'
 WHITE='ffffff'
 
