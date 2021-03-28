@@ -25,6 +25,7 @@ case $THEME in
     FOREGROUND=$BLACK
     PRIMARY=$RED
     SECONDARY=$MAGENTA
+    ;;
   *)
     echo "THEME="$THEME" unknown or not set"
     exit 1
