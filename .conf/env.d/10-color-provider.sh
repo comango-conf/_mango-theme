@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-BLACK='212121'
+BLACK='181a20'
 LIGHT_GRAY='eeeeee'
 DARK_GRAY='4a4a4a'
 WHITE='ffffff'
