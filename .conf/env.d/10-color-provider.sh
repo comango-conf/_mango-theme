@@ -2,7 +2,7 @@
 
 
 BLACK='212121'
-LIGHT_GRAY='dddddd'
+LIGHT_GRAY='eeeeee'
 DARK_GRAY='4a4a4a'
 WHITE='ffffff'
 
@@ -22,6 +22,7 @@ case $THEME in
     PRIMARY=$CYAN
     SECONDARY=$MAGENTA
     ALERT=$RED
+    DARK_THEME=true
     ;;
   light-pink)
     BACKGROUND=$WHITE
@@ -31,6 +32,7 @@ case $THEME in
     PRIMARY=$RED
     SECONDARY=$MAGENTA
     ALERT=ff0000
+    DARK_THEME=false
     ;;
   *)
     echo "THEME="$THEME" unknown or not set"
