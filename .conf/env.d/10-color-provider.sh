@@ -6,6 +6,7 @@ case $THEME in
     LIGHT_GRAY='eeffff'
     DARK_GRAY='4a4a4a'
     WHITE='ffffff'
+
     RED='f07178'
     GREEN='c3e88d'
     YELLOW='ffcb6b'
@@ -14,6 +15,7 @@ case $THEME in
     CYAN='89ddff'
 
     PRIMARY=$CYAN
+    SECONDARY=$MAGENTA
     ;;
   *)
     echo "THEME="$THEME" unknown or not set"
