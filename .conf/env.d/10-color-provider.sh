@@ -23,6 +23,8 @@ case $THEME in
     SECONDARY=$MAGENTA
     ALERT=$RED
     DARK_THEME=true
+
+    BAR_OPACITY=ff
     ;;
   light-pink)
     BACKGROUND=$WHITE
@@ -33,6 +35,8 @@ case $THEME in
     SECONDARY=$MAGENTA
     ALERT=ff0000
     DARK_THEME=false
+
+    BAR_OPACITY=00
     ;;
   *)
     echo "THEME="$THEME" unknown or not set"
