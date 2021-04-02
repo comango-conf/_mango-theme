@@ -43,7 +43,7 @@ case $THEME in
     GTK_THEME=Adwaita-dark
 
     BAR_OPACITY=ff
-    TERM_OPACITY=.95
+    TERM_OPACITY=.80
     ;;
   light-pink)
     RED=$D_RED
