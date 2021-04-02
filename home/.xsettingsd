@@ -1,1 +1,1 @@
-Net/ThemeName "<#{THEME_NAME}#>"
+Net/ThemeName "<#{GTK_THEME}#>"

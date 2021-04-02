@@ -23,6 +23,8 @@ L_CYAN='89ddff'
 
 case $THEME in
   dark-cyan)
+    LIGHT_GRAY='999999'
+
     RED=$L_RED
     GREEN=$L_GREEN
     YELLOW=$L_YELLOW
@@ -33,12 +35,12 @@ case $THEME in
     BACKGROUND=$BLACK
     BACKGROUND_ALT=$DARK_GRAY
     FOREGROUND=$WHITE
-    FOREGROUND_ALT=$DARK_GRAY
+    FOREGROUND_ALT=$LIGHT_GRAY
     PRIMARY=$L_CYAN
     SECONDARY=$MAGENTA
     ALERT=$RED
     DARK_THEME=true
-    THEME_NAME=Adwaita-dark
+    GTK_THEME=Adwaita-dark
 
     BAR_OPACITY=ff
     TERM_OPACITY=.95
@@ -59,7 +61,7 @@ case $THEME in
     SECONDARY=$MAGENTA
     ALERT=ff0000
     DARK_THEME=false
-    THEME_NAME=Adwaita
+    GTK_THEME=Adwaita
 
     BAR_OPACITY=00
     TERM_OPACITY=.80
