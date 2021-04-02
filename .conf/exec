@@ -4,7 +4,6 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
 
-
 function set_theme() {
     case "$1" in
         1|light)
@@ -28,9 +27,10 @@ function set_theme() {
 
 
 if [ -z "$1" ]; then
-
+    echo "1  light"
+    echo "2  dark"
     read -p "pick a theme: " selection
-    set_theme selection
+    set_theme $selection
 else
     set_theme "$@"
 fi
