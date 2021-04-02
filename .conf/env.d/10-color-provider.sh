@@ -38,6 +38,7 @@ case $THEME in
     SECONDARY=$MAGENTA
     ALERT=$RED
     DARK_THEME=true
+    THEME_NAME=Adwaita-dark
 
     BAR_OPACITY=ff
     TERM_OPACITY=.95
@@ -58,6 +59,7 @@ case $THEME in
     SECONDARY=$MAGENTA
     ALERT=ff0000
     DARK_THEME=false
+    THEME_NAME=Adwaita
 
     BAR_OPACITY=00
     TERM_OPACITY=.80
