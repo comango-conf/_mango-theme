@@ -1,0 +1,37 @@
+#!/bin/bash
+
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+
+
+function set_theme() {
+    case "$1" in
+        1|light)
+            set_env_var "THEME" "light-pink"
+            comango upgrade -l
+            xmonad --recompile &> /dev/null
+            xmonad --restart &> /dev/null
+        ;;
+        2|dark)
+            set_env_var "THEME" "dark-cyan"
+            comango upgrade -l
+            xmonad --recompile &> /dev/null
+            xmonad --restart &> /dev/null
+        ;;
+        *)
+            echo "unknown theme"
+        ;;
+    esac
+}
+
+
+
+if [ -z "$1" ]; then
+
+    read -p "pick a theme: " selection
+    set_theme selection
+else
+    set_theme "$@"
+fi
+
