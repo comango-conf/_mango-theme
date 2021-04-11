@@ -66,6 +66,29 @@ case $THEME in
     BAR_OPACITY=00
     TERM_OPACITY=.80
     ;;
+  horizon)
+    LIGHT_GRAY='999999'
+
+    RED=D4516f
+    GREEN=FAC29A
+    YELLOW=F09383
+    BLUE=$L_BLUE
+    MAGENTA=B877DB
+    CYAN=1D8991
+
+    BACKGROUND=232530
+    BACKGROUND_ALT=474A60
+    FOREGROUND=F9DDDD
+    FOREGROUND_ALT=$LIGHT_GRAY
+    PRIMARY=$CYAN
+    SECONDARY=$RED
+    ALERT=$RED
+    DARK_THEME=true
+    GTK_THEME=Adwaita-dark
+
+    BAR_OPACITY=ff
+    TERM_OPACITY=.80
+    ;;
   *)
     echo "THEME="$THEME" unknown or not set"
     exit 1
