@@ -1,26 +1,23 @@
 #!/bin/bash
 
 
+function apply_theme() {
+    set_env_var "THEME" "$1"
+    comango upgrade -l
+    xmonad --recompile &> /dev/null
+    xmonad --restart &> /dev/null
+}
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
 
 function set_theme() {
     case "$1" in
-        1|light)
-            set_env_var "THEME" "light-pink"
-            comango upgrade -l
-            xmonad --recompile &> /dev/null
-            xmonad --restart &> /dev/null
-        ;;
-        2|dark)
-            set_env_var "THEME" "dark-cyan"
-            comango upgrade -l
-            xmonad --recompile &> /dev/null
-            xmonad --restart &> /dev/null
-        ;;
-        *)
-            echo "unknown theme"
-        ;;
+        1|light)   apply_theme "light-pink" ;;
+        2|dark)    apply_theme "dark-cyan"  ;;
+        3|horizon) apply_theme "horizon"    ;;
+
+        *)         echo "unknown theme"   ;;
     esac
 }
 
@@ -29,6 +26,7 @@ function set_theme() {
 if [ -z "$1" ]; then
     echo "1  light"
     echo "2  dark"
+    echo "3  horizon"
     read -p "pick a theme: " selection
     set_theme $selection
 else
