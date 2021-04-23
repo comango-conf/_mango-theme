@@ -4,8 +4,9 @@
 function apply_theme() {
     set_env_var "THEME" "$1"
     comango upgrade -l
-    xmonad --recompile &> /dev/null
+    xmonad --recompile
     xmonad --restart &> /dev/null
+    comango hook reload
 }
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
