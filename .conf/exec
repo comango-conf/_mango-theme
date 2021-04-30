@@ -3,8 +3,9 @@
 
 function apply_theme() {
     set_env_var "THEME" "$1"
+    sudo echo -n
     comango upgrade -l
-    xmonad --recompile
+    xmonad --recompile &> /dev/null
     xmonad --restart &> /dev/null
     comango hook reload
 }
