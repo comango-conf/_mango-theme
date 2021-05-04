@@ -42,7 +42,7 @@ case $THEME in
     DARK_THEME=true
     GTK_THEME=Adwaita-dark
 
-    BAR_OPACITY=ff
+    BAR_OPACITY=aa
     TERM_OPACITY=.80
     ;;
   light-pink)
