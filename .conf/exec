@@ -15,11 +15,12 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
 function set_theme() {
     case "$1" in
-        1|light)   apply_theme "light-pink" ;;
-        2|dark)    apply_theme "dark-cyan"  ;;
-        3|horizon) apply_theme "horizon"    ;;
+        1|light)   apply_theme "light-pink"      ;;
+        2|dark)    apply_theme "dark-cyan"       ;;
+        3|horizon) apply_theme "horizon"         ;;
+        4|pink-dreams) apply_theme "pink-dreams" ;;
 
-        *)         echo "unknown theme"   ;;
+        *)         echo "unknown theme"          ;;
     esac
 }
 
@@ -29,6 +30,7 @@ if [ -z "$1" ]; then
     echo "1  light"
     echo "2  dark"
     echo "3  horizon"
+    echo "4  pink-dreams"
     read -p "pick a theme: " selection
     set_theme $selection
 else
