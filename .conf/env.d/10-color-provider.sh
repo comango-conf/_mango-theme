@@ -111,6 +111,29 @@ case $THEME in
     BAR_OPACITY=ff
     TERM_OPACITY=.80
     ;;
+  catppuccin-pink-dark)
+    LIGHT_GRAY='f5e0dc'
+
+    RED='f38ba8'
+    GREEN='a6e3a1'
+    YELLOW='f9e2af'
+    BLUE='89b4fa'
+    MAGENTA='cba6f7'
+    CYAN='94e2d5'
+
+    BACKGROUND='11111b'
+    BACKGROUND_ALT='11111b'
+    FOREGROUND='cdd6f4'
+    FOREGROUND_ALT='f5e0dc'
+    PRIMARY='f5c2e7'
+    SECONDARY='fab387'
+    ALERT='f38ba8'
+    DARK_THEME=true
+    GTK_THEME='Catppuccin-Mocha-Standard-Pink-Dark'
+
+    BAR_OPACITY=aa
+    TERM_OPACITY=.80
+    ;;
   *)
     echo "THEME="$THEME" unknown or not set"
     exit 1

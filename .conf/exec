@@ -19,6 +19,7 @@ function set_theme() {
         2|dark)    apply_theme "dark-cyan"       ;;
         3|horizon) apply_theme "horizon"         ;;
         4|pink-dreams) apply_theme "pink-dreams" ;;
+        5|catppuccin-pink-dark) apply_theme "catppuccin-pink-dark" ;;
 
         *)         echo "unknown theme"          ;;
     esac
@@ -31,6 +32,7 @@ if [ -z "$1" ]; then
     echo "2  dark"
     echo "3  horizon"
     echo "4  pink-dreams"
+    echo "5  catppuccin-pink-dark"
     read -p "pick a theme: " selection
     set_theme $selection
 else
