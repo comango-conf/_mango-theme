@@ -13,6 +13,7 @@ D_YELLOW='bb8800'
 D_BLUE='0000cc'
 D_MAGENTA='cc00cc'
 D_CYAN='00cccc'
+D_ORANGE='0932b0'
 
 L_RED='f07178'
 L_GREEN='c3e88d'
@@ -20,6 +21,7 @@ L_YELLOW='ffcb6b'
 L_BLUE='82aaff'
 L_MAGENTA='c792ea'
 L_CYAN='89ddff'
+L_ORANGE='fab387'
 
 case $THEME in
   dark-cyan)
@@ -31,6 +33,7 @@ case $THEME in
     BLUE=$L_BLUE
     MAGENTA=$L_MAGENTA
     CYAN=$L_CYAN
+    ORANGE=$L_ORANGE
 
     BACKGROUND=$BLACK
     BACKGROUND_ALT=$DARK_GRAY
@@ -52,6 +55,7 @@ case $THEME in
     BLUE=$D_BLUE
     MAGENTA=$D_MAGENTA
     CYAN=$D_CYAN
+    ORANGE=$D_ORANGE
 
     BACKGROUND=$WHITE
     BACKGROUND_ALT=$LIGHT_GRAY
@@ -73,6 +77,7 @@ case $THEME in
     BLUE=$D_BLUE
     MAGENTA=$D_MAGENTA
     CYAN=$D_CYAN
+    ORANGE=$D_ORANGE
 
     BACKGROUND=$WHITE
     BACKGROUND_ALT=$LIGHT_GRAY
@@ -87,6 +92,7 @@ case $THEME in
     BAR_OPACITY=33
     TERM_OPACITY=.80
 
+
     ;;
   horizon)
     LIGHT_GRAY='999999'
@@ -97,6 +103,7 @@ case $THEME in
     BLUE=$L_BLUE
     MAGENTA=B877DB
     CYAN=1D8991
+    ORANGE=$L_ORANGE
 
     BACKGROUND=232530
     BACKGROUND_ALT=474A60
@@ -118,13 +125,14 @@ case $THEME in
     GREEN='a6e3a1'
     YELLOW='f9e2af'
     BLUE='89b4fa'
-    MAGENTA='cba6f7'
+    MAGENTA='F5C2E7'
     CYAN='94e2d5'
+    ORANGE='fab387'
 
     BACKGROUND='11111b'
-    BACKGROUND_ALT='11111b'
+    BACKGROUND_ALT='585B70'
     FOREGROUND='cdd6f4'
-    FOREGROUND_ALT='f5e0dc'
+    FOREGROUND_ALT='A6ADC8'
     PRIMARY='f5c2e7'
     SECONDARY='fab387'
     ALERT='f38ba8'
@@ -138,3 +146,6 @@ case $THEME in
     echo "THEME="$THEME" unknown or not set"
     exit 1
 esac
+
+BAR_OPACITY_PCT=$(awk "BEGIN { print $(printf "%.2f" "0x$BAR_OPACITY") / 255}")
+BAR_COLOR_RGBA=$(printf "rgba(%d,%d,%d,%.2f)" 0x${BACKGROUND:0:2} 0x${BACKGROUND:2:2} 0x${BACKGROUND:4:2} $BAR_OPACITY_PCT)
